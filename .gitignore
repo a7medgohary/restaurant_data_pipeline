@@ -1,0 +1,16 @@
+# Ignore any secret key files
+*key.json
+*.pem
+*.p12
+
+# Ignore CSV, Excel, and JSON data files
+*.csv
+*.xlsx
+*.json
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
