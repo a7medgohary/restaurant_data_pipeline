@@ -1,0 +1,110 @@
+عظيم جدًا! بما إنك عايز:
+
+تستخدم PySpark لمعالجة بيانات كبيرة (Big Data)
+
+تستخدم dbt Core لتنظيم وتحويل البيانات
+
+وتعرض التحليلات بـ Power BI
+
+وكله يكون في مشروع عملي ينفع يتحط في الـ CV
+
+فأنا هاقترح عليك فكرة مشروع قوية، قابلة للتنفيذ محليًا، وواقعية جدًا 👇
+
+💡 فكرة المشروع: تحليل بيانات طلبات توصيل الطعام (Food Delivery Analytics Platform)
+🎯 هدف المشروع:
+تحليل بيانات ضخمة لتطبيق توصيل طعام (زي Uber Eats أو Talabat أو Hungerstation) لمعرفة:
+
+أكثر المدن طلبًا
+
+متوسط وقت التوصيل
+
+أكتر أنواع الأكل طلبًا
+
+تقييمات العملاء
+
+أداء السائقين والمطاعم
+
+✅ ليه المشروع ده ممتاز:
+السبب	التوضيح
+بيانات ضخمة	هتشتغل على ملايين الطلبات، فـ Spark هيبان فرق الأداء
+تنوع البيانات	فيه بيانات: عملاء، سائقين، مطاعم، تقييمات، مدن، وقت
+مراحل واضحة	عندك: ingestion ➡ cleaning ➡ modeling ➡ visualization
+ينفع Power BI	الداتا متقسّمة كويس لأبعاد ووقائع (Dim & Fact)
+ينفع تحطه في GitHub	وتكتب عنه في CV كـ End-to-End Pipeline
+🧱 مكونات المشروع:
+1. 📥 Data Sources:
+تقدر تستخدم بيانات حقيقية من:
+
+Kaggle - Food Delivery Dataset
+
+Kaggle - Zomato Orders
+
+لو عايز تعمل حجم أكبر، ممكن تضرب البيانات في سكريبت يولد نسخ مكررة لكن بتواريخ مختلفة وأماكن متعددة.
+
+2. ⚙️ الأدوات ودورها:
+الأداة	الوظيفة
+PySpark	لتحميل وتنظيف وتجميع وتحليل الداتا الضخمة
+dbt Core	لتنظيم الـ data models بشكل stages (stg, dim, fact)
+Power BI	لعرض نتائج التحليل برسوم بيانية قوية
+Miniconda	لإدارة البيئة وتشغيل كل حاجة بسهولة
+3. 🧩 فكرة الجداول:
+🔹 Raw CSV Files:
+orders.csv
+
+customers.csv
+
+restaurants.csv
+
+drivers.csv
+
+reviews.csv
+
+🔹 بعد الـ dbt:
+stg_orders, stg_customers, ...
+
+dim_restaurants, dim_drivers, dim_customers
+
+fact_orders, fact_reviews, fact_delivery_times
+
+4. 📊 الأفكار اللي تعرضها في Power BI:
+Top 10 Cities by Orders
+
+Average Delivery Time by City / Driver
+
+Distribution of Ratings
+
+Monthly Order Trends
+
+Restaurant Performance (Order Volume + Avg Rating)
+
+5. 🧪 خطوات العمل:
+تحمّل الداتا
+
+تعالجها بـ PySpark (تنظيف – دمج – حسابات أساسية)
+
+تنقل ملفات نظيفة (parquet/csv) لـ مجلد dbt
+
+تبني نماذج dbt:
+
+Staging
+
+Dimensions
+
+Facts
+
+تصدّر النتائج النهائية CSVs لـ Power BI
+
+تبني Dashboards احترافية
+
+تكتب تقرير بسيط على GitHub يشرح المشروع
+
+📄 مثال يكتب في الـ CV:
+Food Delivery Analytics Platform
+Built a complete end-to-end data pipeline to analyze millions of food delivery orders using PySpark, dbt Core, and Power BI.
+Processed large-scale datasets to identify top-performing restaurants, driver efficiency, and customer satisfaction trends.
+
+Tools: PySpark, dbt, Power BI, DuckDB, Conda
+
+Data Volume: 5M+ orders, 500k+ customers, 100k+ reviews
+
+Techniques: ETL, data modeling (staging, dimension, fact), dashboarding

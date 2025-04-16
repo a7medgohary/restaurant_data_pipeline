@@ -1,0 +1,227 @@
+[0m00:53:31.328675 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FB9AC26050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FB9BD490F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FB9BD4A200>]}
+
+
+============================== 00:53:31.344684 | 59ee87b8-69ac-49f2-8d6c-df24a834c97b ==============================
+[0m00:53:31.344684 [info ] [MainThread]: Running with dbt=1.9.4
+[0m00:53:31.344684 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'profiles_dir': 'C:\\Users\\162833\\.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt init .', 'send_anonymous_usage_stats': 'True'}
+[0m00:55:01.832221 [debug] [MainThread]: Starter project path: C:\Users\162833\AppData\Local\miniconda3\envs\food_project\lib\site-packages\dbt\include\starter_project
+[0m00:55:01.888016 [info ] [MainThread]: 
+Your new dbt project "food_project" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m00:55:01.888016 [info ] [MainThread]: Setting up your profile.
+[0m00:58:50.440036 [info ] [MainThread]: Profile food_project written to C:\Users\162833\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m00:58:50.440036 [debug] [MainThread]: Command `dbt init` succeeded at 00:58:50.440036 after 319.22 seconds
+[0m00:58:50.440036 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FB9AC26050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FB9BD4A260>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FBACB92CE0>]}
+[0m00:58:50.440036 [debug] [MainThread]: Flushing usage events
+[0m00:58:51.145752 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:59:14.205040 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DD76145FC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DD7726E9B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DD7726E7D0>]}
+
+
+============================== 00:59:14.220992 | 94e0029b-9de6-4f60-9f43-63f76d94c141 ==============================
+[0m00:59:14.220992 [info ] [MainThread]: Running with dbt=1.9.4
+[0m00:59:14.220992 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\162833\\.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m00:59:14.246057 [info ] [MainThread]: dbt version: 1.9.4
+[0m00:59:14.246057 [info ] [MainThread]: python version: 3.10.17
+[0m00:59:14.253034 [info ] [MainThread]: python path: C:\Users\162833\AppData\Local\miniconda3\envs\food_project\python.exe
+[0m00:59:14.253034 [info ] [MainThread]: os info: Windows-10-10.0.26100-SP0
+[0m00:59:14.253034 [info ] [MainThread]: Error importing adapter: No module named 'dbt.adapters.oracle'
+[0m00:59:14.253034 [info ] [MainThread]: Error importing adapter: No module named 'dbt.adapters.redshift'
+[0m00:59:15.349931 [info ] [MainThread]: Error importing adapter: No module named 'dbt.adapters.duckdb'
+[0m00:59:15.366012 [info ] [MainThread]: Error importing adapter: No module named 'dbt.adapters.duckdb'
+[0m00:59:15.366012 [info ] [MainThread]: Using profiles dir at C:\Users\162833\.dbt
+[0m00:59:15.366012 [info ] [MainThread]: Using profiles.yml file at C:\Users\162833\.dbt\profiles.yml
+[0m00:59:15.366012 [info ] [MainThread]: Using dbt_project.yml file at C:\me\food_delivery_analytics\dbt_food_project\dbt_project.yml
+[0m00:59:15.366012 [info ] [MainThread]: Configuration:
+[0m00:59:15.366012 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
+[0m00:59:15.366012 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m00:59:15.366012 [info ] [MainThread]: Required dependencies:
+[0m00:59:15.366012 [debug] [MainThread]: Executing "git --help"
+[0m00:59:15.495539 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m00:59:15.503200 [debug] [MainThread]: STDERR: "b''"
+[0m00:59:15.503200 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m00:59:15.503200 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m00:59:15.503200 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m00:59:15.503200 [info ] [MainThread]: Could not load dbt_project.yml
+Profile loading failed for the following reason:
+Runtime Error
+  Credentials in profile "HR_DWH", target "dev" invalid: Runtime Error
+    Could not find adapter type oracle!
+
+Runtime Error
+  Credentials in profile "Ignite_DWH", target "dev" invalid: Runtime Error
+    Could not find adapter type redshift!
+
+Runtime Error
+  Credentials in profile "hr_g", target "dev" invalid: Runtime Error
+    Could not find adapter type duckdb!
+
+Runtime Error
+  Credentials in profile "realstate", target "dev" invalid: Runtime Error
+    Could not find adapter type duckdb!
+
+
+[0m00:59:15.503200 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\me\food_delivery_analytics\dbt_food_project\dbt_project.yml> not found
+
+[0m00:59:15.509286 [debug] [MainThread]: Command `dbt debug` failed at 00:59:15.509286 after 1.38 seconds
+[0m00:59:15.509286 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DD76145FC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DD7726EAA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DD08158040>]}
+[0m00:59:15.509286 [debug] [MainThread]: Flushing usage events
+[0m00:59:16.055340 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m01:11:56.748610 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFBC025F90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFBD1529B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFBD1527D0>]}
+
+
+============================== 01:11:56.752707 | 73cd0259-fcf3-4b59-a0b7-1cab1e950261 ==============================
+[0m01:11:56.752707 [info ] [MainThread]: Running with dbt=1.9.4
+[0m01:11:56.753588 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'profiles_dir': 'C:\\Users\\162833\\.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m01:11:56.770557 [info ] [MainThread]: dbt version: 1.9.4
+[0m01:11:56.771715 [info ] [MainThread]: python version: 3.10.17
+[0m01:11:56.772783 [info ] [MainThread]: python path: C:\Users\162833\AppData\Local\miniconda3\envs\food_project\python.exe
+[0m01:11:56.773764 [info ] [MainThread]: os info: Windows-10-10.0.26100-SP0
+[0m01:11:57.591972 [info ] [MainThread]: Using profiles dir at C:\Users\162833\.dbt
+[0m01:11:57.592916 [info ] [MainThread]: Using profiles.yml file at C:\Users\162833\.dbt\profiles.yml
+[0m01:11:57.593918 [info ] [MainThread]: Using dbt_project.yml file at C:\me\food_delivery_analytics\dbt_food_project\dbt_project.yml
+[0m01:11:57.594880 [info ] [MainThread]: adapter type: bigquery
+[0m01:11:57.595875 [info ] [MainThread]: adapter version: 1.9.1
+[0m01:11:57.596875 [info ] [MainThread]: Configuration:
+[0m01:11:57.597680 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m01:11:57.598447 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m01:11:57.599143 [info ] [MainThread]: Required dependencies:
+[0m01:11:57.599695 [debug] [MainThread]: Executing "git --help"
+[0m01:11:57.669356 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m01:11:57.670357 [debug] [MainThread]: STDERR: "b''"
+[0m01:11:57.670357 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m01:11:57.671357 [info ] [MainThread]: Connection:
+[0m01:11:57.672378 [info ] [MainThread]:   method: service-account
+[0m01:11:57.673354 [info ] [MainThread]:   database: fooddelivary-456823
+[0m01:11:57.674356 [info ] [MainThread]:   execution_project: fooddelivary-456823
+[0m01:11:57.675355 [info ] [MainThread]:   schema: food_analytics
+[0m01:11:57.676356 [info ] [MainThread]:   location: US
+[0m01:11:57.677355 [info ] [MainThread]:   priority: interactive
+[0m01:11:57.678354 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m01:11:57.678354 [info ] [MainThread]:   impersonate_service_account: None
+[0m01:11:57.679778 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m01:11:57.679778 [info ] [MainThread]:   job_retries: 1
+[0m01:11:57.681206 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m01:11:57.682212 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m01:11:57.682212 [info ] [MainThread]:   timeout_seconds: 300
+[0m01:11:57.683213 [info ] [MainThread]:   client_id: None
+[0m01:11:57.684215 [info ] [MainThread]:   token_uri: None
+[0m01:11:57.684215 [info ] [MainThread]:   dataproc_region: None
+[0m01:11:57.685212 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m01:11:57.685212 [info ] [MainThread]:   gcs_bucket: None
+[0m01:11:57.686219 [info ] [MainThread]:   dataproc_batch: None
+[0m01:11:57.687212 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m01:11:58.097426 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m01:11:58.097426 [debug] [MainThread]: On debug: select 1 as id
+[0m01:11:58.098427 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m01:11:58.098427 [debug] [MainThread]: BigQuery adapter: Got an error when attempting to create a bigquery " "client: '[Errno 22] Invalid argument: '"C:\\me\\food_delivery_analytics\\notebooks\\fooddelivary-456823-65b29f3b5b38key.json"''
+[0m01:11:58.099427 [debug] [MainThread]: BigQuery adapter: Unhandled error while running:
+select 1 as id
+[0m01:11:58.100427 [debug] [MainThread]: BigQuery adapter: Database Error
+  [Errno 22] Invalid argument: '"C:\\me\\food_delivery_analytics\\notebooks\\fooddelivary-456823-65b29f3b5b38key.json"'
+[0m01:11:58.100427 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m01:11:58.101428 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m01:11:58.102476 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\me\food_delivery_analytics\dbt_food_project\dbt_project.yml> not found
+
+[0m01:11:58.103072 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >'NoneType' object has no attribute 'close'
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m01:11:58.104081 [debug] [MainThread]: Command `dbt debug` failed at 01:11:58.104081 after 1.44 seconds
+[0m01:11:58.105183 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFBC025F90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFCE0208E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFCE0206A0>]}
+[0m01:11:58.105183 [debug] [MainThread]: Flushing usage events
+[0m01:11:58.801785 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m01:12:31.108544 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020DF64A6020>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020DF75CEA10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020DF75CE830>]}
+
+
+============================== 01:12:31.111543 | 46491109-efa6-4be4-9721-91bcc0b83a16 ==============================
+[0m01:12:31.111543 [info ] [MainThread]: Running with dbt=1.9.4
+[0m01:12:31.113542 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\162833\\.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m01:12:31.128538 [info ] [MainThread]: dbt version: 1.9.4
+[0m01:12:31.129510 [info ] [MainThread]: python version: 3.10.17
+[0m01:12:31.130318 [info ] [MainThread]: python path: C:\Users\162833\AppData\Local\miniconda3\envs\food_project\python.exe
+[0m01:12:31.131325 [info ] [MainThread]: os info: Windows-10-10.0.26100-SP0
+[0m01:12:31.971041 [info ] [MainThread]: Using profiles dir at C:\Users\162833\.dbt
+[0m01:12:31.972289 [info ] [MainThread]: Using profiles.yml file at C:\Users\162833\.dbt\profiles.yml
+[0m01:12:31.972289 [info ] [MainThread]: Using dbt_project.yml file at C:\me\food_delivery_analytics\dbt_food_project\dbt_project.yml
+[0m01:12:31.974312 [info ] [MainThread]: adapter type: bigquery
+[0m01:12:31.974312 [info ] [MainThread]: adapter version: 1.9.1
+[0m01:12:31.975489 [info ] [MainThread]: Configuration:
+[0m01:12:31.976496 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m01:12:31.976496 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m01:12:31.977599 [info ] [MainThread]: Required dependencies:
+[0m01:12:31.978318 [debug] [MainThread]: Executing "git --help"
+[0m01:12:32.045355 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m01:12:32.046368 [debug] [MainThread]: STDERR: "b''"
+[0m01:12:32.046368 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m01:12:32.047440 [info ] [MainThread]: Connection:
+[0m01:12:32.048362 [info ] [MainThread]:   method: service-account
+[0m01:12:32.049410 [info ] [MainThread]:   database: fooddelivary-456823
+[0m01:12:32.050362 [info ] [MainThread]:   execution_project: fooddelivary-456823
+[0m01:12:32.051345 [info ] [MainThread]:   schema: food_analytics
+[0m01:12:32.052358 [info ] [MainThread]:   location: US
+[0m01:12:32.053352 [info ] [MainThread]:   priority: interactive
+[0m01:12:32.054351 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m01:12:32.054351 [info ] [MainThread]:   impersonate_service_account: None
+[0m01:12:32.055351 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m01:12:32.056350 [info ] [MainThread]:   job_retries: 1
+[0m01:12:32.056350 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m01:12:32.057411 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m01:12:32.058541 [info ] [MainThread]:   timeout_seconds: 300
+[0m01:12:32.059417 [info ] [MainThread]:   client_id: None
+[0m01:12:32.059417 [info ] [MainThread]:   token_uri: None
+[0m01:12:32.060517 [info ] [MainThread]:   dataproc_region: None
+[0m01:12:32.061466 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m01:12:32.062418 [info ] [MainThread]:   gcs_bucket: None
+[0m01:12:32.063418 [info ] [MainThread]:   dataproc_batch: None
+[0m01:12:32.064420 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m01:12:32.387647 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m01:12:32.388661 [debug] [MainThread]: On debug: select 1 as id
+[0m01:12:32.388661 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m01:12:32.389563 [debug] [MainThread]: BigQuery adapter: Got an error when attempting to create a bigquery " "client: '[Errno 22] Invalid argument: '"C:\\me\\food_delivery_analytics\\notebooks\\fooddelivary-456823-65b29f3b5b38key.json"''
+[0m01:12:32.390564 [debug] [MainThread]: BigQuery adapter: Unhandled error while running:
+select 1 as id
+[0m01:12:32.390564 [debug] [MainThread]: BigQuery adapter: Database Error
+  [Errno 22] Invalid argument: '"C:\\me\\food_delivery_analytics\\notebooks\\fooddelivary-456823-65b29f3b5b38key.json"'
+[0m01:12:32.391669 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m01:12:32.392218 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m01:12:32.393257 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\me\food_delivery_analytics\dbt_food_project\dbt_project.yml> not found
+
+[0m01:12:32.394225 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >'NoneType' object has no attribute 'close'
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m01:12:32.395289 [debug] [MainThread]: Command `dbt debug` failed at 01:12:32.395289 after 1.37 seconds
+[0m01:12:32.396400 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020DF64A6020>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020D885F5060>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020D885F5240>]}
+[0m01:12:32.397300 [debug] [MainThread]: Flushing usage events
+[0m01:12:32.972491 [debug] [MainThread]: An error was encountered while trying to flush usage events

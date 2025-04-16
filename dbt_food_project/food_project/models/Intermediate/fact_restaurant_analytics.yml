@@ -1,0 +1,3 @@
+models:
+  - name: fact_restaurant_analytics
+    description: The fact_restaurant_analytics model provides a comprehensive view of restaurant analytics. It includes details such as restaurant ID, average cost for one person, currency, table booking availability, online delivery status, active delivery status, switch to order menu status, price range, price category, and price range category. The model also categorizes restaurants based on their average cost and price range into categories like 'Cheap', 'Moderate', 'Expensive', 'Luxury', 'Budget', 'Affordable', 'Mid-range', 'Premium', and 'Undefined'.

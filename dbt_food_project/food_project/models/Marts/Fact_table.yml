@@ -1,0 +1,3 @@
+models:
+  - name: Fact_table
+    description: The Fact_table model is a cleaned version of the stagg_res table from the food_analytics dataset in the fooddelivary-456823 project. It includes columns for restaurant_id, country_code, average_cost_for_two, currency, has_table_booking, has_online_delivery, is_delivering_now, switch_to_order_menu, and price_range. Each of these columns provides specific information about the restaurant and its services.

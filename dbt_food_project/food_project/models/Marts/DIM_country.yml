@@ -1,0 +1,3 @@
+models:
+  - name: DIM_country
+    description: The DIM_country model is a dimension table that contains country information. It is derived from the 'country_code' table in the 'food_analytics' schema of the 'fooddelivary-456823' database. This model is used to provide country-related context to other models in the dbt project.

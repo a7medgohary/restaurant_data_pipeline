@@ -1,0 +1,3 @@
+models:
+  - name: DIM_location
+    description: The DIM_location model is a dimension table that contains location-related information for restaurants. It includes columns for restaurant ID, country code, city, address, locality, locality verbose, longitude, and latitude. The data is sourced from the 'stagg_res' table in the 'food_analytics' dataset of the 'fooddelivary-456823' project. The model filters out records where the restaurant ID is null.

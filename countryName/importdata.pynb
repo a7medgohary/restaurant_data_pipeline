@@ -1,0 +1,20 @@
+import requests
+import pandas as pd
+# جلب البيانات من API
+url = "https://restcountries.com/v3.1/all"
+response = requests.get(url)
+data = response.json()
+
+# تجهيز البيانات المطلوبة
+countries = []
+for country in data:
+    name = country.get('name', {}).get('common', '')
+    code = country.get('cca2', '')
+    flag_url = country.get('flags', {}).get('svg', '')
+    countries.append({'Country Name': name, 'Country Code': code, 'Flag URL': flag_url})
+
+# تحويل البيانات إلى DataFrame
+df = pd.DataFrame(countries)
+
+# تصدير البيانات إلى ملف Excel
+df.to_excel('countries_with_flags.xlsx', index=False)

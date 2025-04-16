@@ -1,0 +1,7 @@
+sources:
+  - name: food_delivery
+    database: fooddelivary-456823
+    schema: food_analytics     
+    tables:
+      - name: resturant
+      - name: country_code 

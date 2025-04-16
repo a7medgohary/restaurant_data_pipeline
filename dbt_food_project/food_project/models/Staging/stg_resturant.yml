@@ -1,0 +1,8 @@
+version: 2
+
+models:
+  - name: stg_resturant
+    description: >
+      The stg_resturant model is a representation of the 'resturant' table 
+      from the 'food_analytics' dataset in the 'fooddelivary-456823' project. 
+      It contains all the columns and records from the source table.

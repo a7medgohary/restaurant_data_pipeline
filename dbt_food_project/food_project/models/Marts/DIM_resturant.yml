@@ -1,0 +1,3 @@
+models:
+  - name: DIM_resturant
+    description: "The DIM_resturant model is a cleaned version of the stagg_res table from the food_analytics dataset in the fooddelivary-456823 project. It includes the following columns: 'Restaurant ID', 'Restaurant Name', 'Cuisines', 'Aggregate rating', 'Rating color', 'Rating text', and 'Votes'. The model filters out any records where the 'Restaurant ID' is null."
