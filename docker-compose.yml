@@ -106,6 +106,7 @@ services:
     volumes:
       - ./jupyter:/home/jovyan/work
       - ./data:/home/jovyan/work/data
+      - D:/projects/restaurant_data_pipeline/the_key_for_bigquery:/home/jovyan/keys
     networks:
       - spark-net
 
