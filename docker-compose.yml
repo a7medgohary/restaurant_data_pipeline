@@ -1,0 +1,114 @@
+services:
+
+  spark-master:
+    image: bitnami/spark:latest
+    container_name: spark-master
+    hostname: spark-master
+    environment:
+      - SPARK_MODE=master
+    ports:
+      - "8085:8080"
+    networks:
+      - spark-net
+
+  spark-worker:
+    image: bitnami/spark:latest
+    container_name: spark-worker
+    hostname: spark-worker
+    environment:
+      - SPARK_MODE=worker
+      - SPARK_MASTER_URL=spark://spark-master:7077
+    ports:
+      - "8086:8081"
+    networks:
+      - spark-net
+
+  postgres:
+    image: postgres:13
+    container_name: airflow_postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=airflow
+      - POSTGRES_PASSWORD=airflow
+      - POSTGRES_DB=airflow
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+    networks:
+      - spark-net
+
+  airflow:
+    image: apache/airflow:2.9.1-python3.9
+    container_name: airflow
+    restart: always
+    environment:
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__CORE__LOAD_EXAMPLES=False
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
+      - AIRFLOW__DATABASE__LOAD_DEFAULT_CONNECTIONS=False
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+    ports:
+      - "8090:8080"
+    depends_on:
+      - postgres
+    command: webserver
+    networks:
+      - spark-net
+
+  airflow-scheduler:
+    image: apache/airflow:2.9.1-python3.9
+    container_name: airflow-scheduler
+    restart: always
+    environment:
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__CORE__LOAD_EXAMPLES=False
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
+      - AIRFLOW__DATABASE__LOAD_DEFAULT_CONNECTIONS=False
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+    depends_on:
+      - postgres
+    command: scheduler
+    networks:
+      - spark-net
+
+  airflow-init:
+    image: apache/airflow:2.9.1-python3.9
+    depends_on:
+      - postgres
+    environment:
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
+      - AIRFLOW__DATABASE__LOAD_DEFAULT_CONNECTIONS=False
+    command: bash -c "airflow db migrate && airflow users create --username admin --password admin --firstname Admin --lastname User --role Admin --email admin@example.com"
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+    networks:
+      - spark-net
+
+  dbt:
+    image: python:3.10
+    container_name: dbt
+    volumes:
+      - ./dbt:/dbt
+    working_dir: /dbt
+    entrypoint: /bin/bash
+    networks:
+      - spark-net
+
+  jupyter:
+    image: jupyter/pyspark-notebook:latest
+    container_name: jupyter
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./jupyter:/home/jovyan/work
+      - ./data:/home/jovyan/work/data
+    networks:
+      - spark-net
+
+networks:
+  spark-net:
+    driver: bridge
