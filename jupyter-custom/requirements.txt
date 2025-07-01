@@ -1,0 +1,8 @@
+google-cloud-bigquery
+pandas-gbq
+gcsfs
+pyarrow
+openpyxl
+jupyterlab
+ipykernel
+pyspark==3.5.1
