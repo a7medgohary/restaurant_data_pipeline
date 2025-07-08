@@ -32,10 +32,13 @@ services:
       - POSTGRES_USER=airflow
       - POSTGRES_PASSWORD=airflow
       - POSTGRES_DB=airflow
+      - POSTGRES_SHARED_BUFFERS=256MB
+      - POSTGRES_WORK_MEM=16MB
+      - POSTGRES_EFFECTIVE_CACHE_SIZE=512MB
     ports:
       - "5432:5432"
     volumes:
-      - ./postgres-data:/var/lib/postgresql/data
+      - postgres_data:/var/lib/postgresql/data
     networks:
       - spark-net
 
@@ -95,16 +98,16 @@ services:
       context: ./dbt-custom
     container_name: dbt
     volumes:
-      - ./dbt:/dbt
-      - D:/projects/restaurant_data_pipeline/the_key_for_bigquery:/the_key_for_bigquery
+      - ./dbt/resturant_project:/dbt
+      - ./the_key_for_bigquery:/the_key_for_bigquery
+      - ./.dbt:/root/.dbt
     working_dir: /dbt
     tty: true
     stdin_open: true
+    environment:
+      - DBT_THREADS=4
     networks:
       - spark-net
-
-
-
 
   jupyter:
     build:
@@ -114,7 +117,8 @@ services:
       - "8890:8888"
     volumes:
       - ./notebooks:/app
-      - D:\projects\restaurant_data_pipeline\the_key_for_bigquery:/the_key_for_bigquery
+      - D:/projects/restaurant_data_pipeline/the_key_for_bigquery:/the_key_for_bigquery
+      - D:/projects/restaurant_data_pipeline/data/data1:/home/jovyan/work/data/data1
     environment:
       - JUPYTER_ENABLE_LAB=yes
     command: jupyter lab --ip=0.0.0.0 --allow-root --no-browser --NotebookApp.token=''
@@ -124,3 +128,6 @@ services:
 networks:
   spark-net:
     driver: bridge
+
+volumes:
+  postgres_data:

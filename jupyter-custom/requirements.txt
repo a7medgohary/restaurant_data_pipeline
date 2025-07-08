@@ -1,8 +1,8 @@
-google-cloud-bigquery
-pandas-gbq
-gcsfs
 pyarrow
 openpyxl
 jupyterlab
 ipykernel
 pyspark==3.5.1
+psycopg2-binary
+sqlalchemy
+pandas>=1.0.5
